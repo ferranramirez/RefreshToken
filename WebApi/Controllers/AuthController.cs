@@ -11,14 +11,11 @@ namespace WebApi.Controllers
     [Route("[controller]")]
     public class AuthController : ControllerBase
     {
-        //private readonly IDistributedCache _distributedCache;
         private readonly IAuthService _authService;
 
         public AuthController(
-            //IDistributedCache distributedCache,
             IAuthService authService)
         {
-            //_distributedCache = distributedCache;
             _authService = authService;
         }
 

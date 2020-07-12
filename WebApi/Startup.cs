@@ -47,6 +47,11 @@ namespace WebApi
                 };
             });
 
+            services.AddDistributedRedisCache(option =>
+            {
+                option.Configuration = "127.0.0.1";
+            });
+
             services.AddSingleton<IAuthService, AuthService>();
         }
 
